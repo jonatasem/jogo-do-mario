@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header, #board {
+    transition: background-image 2.5s ease;
+}
+
+header {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0.5rem auto;
+    border: 1px solid silver;
+    text-align: end;
+    background-image: linear-gradient(to bottom, #00a2ff, #00a2ffa6);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.layout-pontuacao {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px white;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px silver;
+}
+
+.clouds {
+    max-width: 300px;
+    position: absolute;
+    top: 10px;
+    animation: animar-clouds 10s infinite linear;
+}
+
+@keyframes animar-clouds {
+    0% { right: -30%; }
+    100% { right: 100%; }
+}
+
+.main-board {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border: 1px solid silver;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #00a2ff, #ffffff);
+    border-bottom: 10px solid brown;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.pipe {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+    animation: animar-pipe 1.5s infinite linear;
+}
+
+@keyframes animar-pipe {
+    0% { right: 0; }
+    100% { right: 100%; }
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: animar-mario 500ms ease-in-out;
+}
+
+@keyframes animar-mario {
+    0% { bottom: 0; }
+    40% { bottom: 180px; }
+    100% { bottom: 0; }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile {
+    display: none;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid silver;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px silver;
+    margin-top: 2rem;
+}
+
+.mobile:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+
+    .main-board {
+        height: 350px;
+    }
+}
