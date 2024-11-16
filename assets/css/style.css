@@ -97,7 +97,6 @@ footer {
 }
 
 .mobile {
-    display: none;
     padding: 1rem 2rem;
     background-color: transparent;
     border: 1px solid silver;
@@ -111,10 +110,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .mobile {
-        display: block;
-    }
-
     .main-board {
         height: 350px;
     }
